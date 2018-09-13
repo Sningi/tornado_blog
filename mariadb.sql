@@ -12,13 +12,14 @@ create table users(
 
 create table category(
 id integer primary key,
-name varchar(10)
+name varchar(10),
+sum int default 0
 );
 
 create table articles(
     id integer primary key AUTO_INCREMENT,
     title varchar(30),
-    summary tinytext,
+    summary text,
     content text,
     Key_words varchar(20),
     category integer REFERENCES category(id) ON DELETE CASCADE,

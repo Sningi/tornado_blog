@@ -1,5 +1,4 @@
-#1 Init database
-    #see the text mariadb.sql
+#1 Init database by see the text mariadb.sql
 
     #
     MariaDB [blog]> select * from category;

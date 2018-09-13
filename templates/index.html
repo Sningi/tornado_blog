@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sning 主页</title>
+<meta name="keywords" content="个人博客,Sning个人博客,宋高明" />
+<meta name="description" content="Sning个人博客，学无止境，勇于探索。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/base.css" rel="stylesheet">
+<link href="static/css/index.css" rel="stylesheet">
+<link href="static/css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <div id="mnav">
+    <div class="logo"><a href="/">Sning个人博客</a></div>
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <ul id="starlist">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog_list=9900.html">博客</a></li>
+        <li><a href="write.html">写作</a></li>
+        <li><a href="share.html">项目</a></li>
+        <li><a href="file.html">文件</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+  </div>
+<script>
+window.onload = function ()
+{
+  var oH2 = document.getElementById("mnavh");
+  var oUl = document.getElementById("starlist");
+  oH2.onclick = function ()
+  {
+    var style = oUl.style;
+    style.display = style.display == "block" ? "none" : "block";
+    oH2.className = style.display == "block" ? "open" : ""
+  }
+var obj=null;
+var As=document.getElementById('starlist').getElementsByTagName('a');
+obj = As[0];
+for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+obj=As[i];}
+obj.id='selected'
+}
+</script>
+</header>
+<div class="picshow">
+  <ul>
+    <li><a href="/"><i><img src="static/images/b01.jpg"></i>
+      <div class="font">
+        <h3>个人博客模板《早安》</h3>
+      </div>
+      </a></li>
+    <li><a href="/"><i><img src="static/images/b02.jpg"></i>
+      <div class="font">
+        <h3>个人博客模板《早安》</h3>
+      </div>
+      </a></li>
+    <li><a href="/"><i><img src="static/images/b03.jpg"></i>
+      <div class="font">
+        <h3>个人博客模板《早安》</h3>
+      </div>
+      </a></li>
+    <li><a href="/"><i><img src="static/images/b04.jpg"></i>
+      <div class="font">
+        <h3>个人博客模板《早安》</h3>
+      </div>
+      </a></li>
+    <li><a href="/"><i><img src="static/images/b05.jpg"></i>
+      <div class="font">
+        <h3>个人博客模板《早安》</h3>
+      </div>
+      </a></li>
+  </ul>
+</div>
+<article>
+  <h2 class="hometitle"><span></span>博客推荐</h2>
+  <div class="blogs" id="articlelist">
+  {% for article in articles %}
+      <li>
+        <span class="blogpic">
+          <a href="article_id={{ article[6] }}.html" target="_blank">
+          <img src="{{ article[0] }}">
+          </a>
+        </span>
+        <h3 class="blogtitle">
+          <a href="article_id={{ article[6] }}.html" target="_blank">
+          {{ article[1] }}
+          </a>
+        </h3>
+        <div class="bloginfo">
+          <p>{{ article[2] }}</p>
+        </div>
+        <div class="autor">
+          <span class="lm">
+            <a href="article_id={{ article[6] }}.html" target="_blank" title="{{ article[3] }}" target="_blank" class="classname">
+              {{ article[3] }}
+            </a>
+          </span>
+          <span class="dtime">{{ article[4] }}</span><span class="viewnum">浏览（{{article[5]}}）</span>
+          <span class="readmore"><a href="article_id={{ article[6] }}.html" target="_blank">阅读原文>></a></span>
+        </div>
+      </li>
+  {% end %}
+  {% if not articles %}
+  <li><p style="text-align: center;">无相关文章</p></li>
+  {% end %}
+  </div>
+  <div class="sidebar">
+    <div class="about">
+      <div class="avatar"> <img src="static/images/avatar.jpg" alt=""> </div>
+      <p class="abname">Insight | Sning</p>
+      <p class="abposition">物联网专业、编程技术</p>
+      <div class="abtext"> 一个90后在校大学生！16年进入计算机领域。喜欢学习各种计算机技术，熟悉Linux环境，了解Python常见模块，能够进行基本Java、C/C++、Android编程，嵌入式开发。 </div>
+    </div>
+    <div class="search">
+      <form action="/" method="post" name="searchform" id="searchform">
+        <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+        <input name="show" value="title" type="hidden">
+        <input name="tempid" value="1" type="hidden">
+        <input name="tbname" value="news" type="hidden">
+        <input name="Submit" class="input_submit" value="搜索" type="submit">
+      </form>
+    </div>
+    <div class="cloud">
+      <h2 class="hometitle">标签云</h2>
+      <ul>
+        <a href="/">Python</a>
+        <a href="/">html5</a>
+        <a href="/">校园生活</a>
+        <a href="/">人脸识别</a>
+        <a href="/">青春</a>
+        <a href="/">温暖</a>
+        <a href="/">数据可视化</a>
+        <a href="/">学无止境</a>
+        <a href="/">考研</a>
+        <a href="/">Linux</a>
+        <a href="/">Java</a>
+        <a href="/">C/C++</a>
+      </ul>
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">点击排行</h2>
+      <ul>
+        <li><b><a href="/download/div/2015-04-10/746.html" target="_blank">【活动作品】柠檬绿兔小白个人博客模板30...</a></b>
+          <p><i><img src="static/images/t02.jpg"></i>展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标...</p>
+        </li>
+        <li><b><a href="/download/div/2014-02-19/649.html" target="_blank"> 个人博客模板（2014草根寻梦）30...</a></b>
+          <p><i><img src="static/images/b03.jpg"></i>2014第一版《草根寻梦》个人博客模板简单、优雅、稳重、大气、低调。专为年轻有志向却又低调的草根站长设...</p>
+        </li>
+        <li><b><a href="/download/div/2013-08-08/571.html" target="_blank">黑色质感时间轴html5个人博客模板30...</a></b>
+          <p><i><img src="static/images/b04.jpg"></i>黑色时间轴html5个人博客模板颜色以黑色为主色，添加了彩色作为网页的一个亮点，导航高亮显示、banner图片...</p>
+        </li>
+        <li><b><a href="/download/div/2014-09-18/730.html" target="_blank">情侣博客模板系列之《回忆》Html30...</a></b>
+          <p><i><img src="static/images/b05.jpg"></i>Html5+css3情侣博客模板，主题《回忆》，使用css3技术实现网站动画效果，主题《回忆》,分为四个主要部分，...</p>
+        </li>
+      </ul>
+    </div>
+    <div class="links">
+      <h2 class="hometitle">友情链接</h2>
+      <ul>
+        <li><a href="http://www.yangqq.com" title="杨青个人博客">杨青个人博客</a></li>
+      </ul>
+    </div>
+    <div class="weixin">
+      <h2 class="hometitle">个人微信</h2>
+      <ul>
+        <img src="static/images/wx.jpg">
+      </ul>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="/">Sning</a>
+  <a href="http://www.yangqq.com" target="_blank">模板来自：杨青个人博客</a>
+  </p>
+</footer>
+</body>
+</html>

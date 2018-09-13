@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sning 关于</title>
+<meta name="keywords" content="个人博客,Sning个人博客,宋高明" />
+<meta name="description" content="Sning个人博客，学无止境，勇于探索。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/base.css" rel="stylesheet">
+<link href="static/css/index.css" rel="stylesheet">
+<link href="static/css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <div id="mnav">
+    <div class="logo"><a href="/">Sning个人博客</a></div>
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <ul id="starlist">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog_category=recommend.html">博客</a></li>
+        <li><a href="write.html">写作</a></li>
+        <li><a href="share.html">项目</a></li>
+        <li><a href="file.html">文件</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+  </div>
+<script>
+window.onload = function ()
+{
+  var oH2 = document.getElementById("mnavh");
+  var oUl = document.getElementById("starlist");
+  oH2.onclick = function ()
+  {
+    var style = oUl.style;
+    style.display = style.display == "block" ? "none" : "block";
+    oH2.className = style.display == "block" ? "open" : ""
+  }
+var obj=null;
+var As=document.getElementById('starlist').getElementsByTagName('a');
+obj = As[0];
+for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+obj=As[i];}
+obj.id='selected'
+}
+</script>
+</header>
+<article>
+  <h1 class="t_nav"><span>飘风不终朝，骤雨不终日。</span><a href="/" class="n1">首页</a><a href="about.html" class="n2">关于本站</a></h1>
+  <div class="ab_box">
+    <div class="leftbox">
+      <div class="newsview">
+        <div class="about_infos" style="font-size:15px">
+          <p>开发工具：Sublime Text 3<br /></p><br />
+          <p>网站框架：<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;后端：Tornado+MariaDB +Python<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;前端：Html+Css+Js
+          </p><br />
+          <p>运行环境：<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;操作系统：Linux-4.17.8-1-ARCH x86_64 GNU/Linux&nbsp;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;软件版本：<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Mysql  Ver 15.1 Distrib 10.1.34-MariaDB, for Linux (x86_64)<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Python 3.6.6 [GCC 8.1.1 20180531] on linux<br />
+          </p><br />
+          <p>测试环境：<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;PC：Chromium  67.0.3396.99（正式版本）Arch Linux （64 位）<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Mozills Firefox 61.0.1 for Arch Linux （64位）<br />
+              &nbsp; &nbsp; &nbsp; &nbsp;Android：Quark 2.4.2.986 U4 2.0内核<br />
+          </p><br />
+          <p>github地址：<a href="https://github.com/Sningi/" target="_blank">https://github.com/Sningi/</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="rightbox">
+      <div class="aboutme">
+        <h2 class="hometitle">关于我</h2>
+        <div class="avatar"> <img src="static/images/avatar.jpg"> </div>
+        <div class="ab_con">
+          <p>网名：Insight | Sning</p>
+          <p>职业：物联网专业学生、编程技术</p>
+          <p>个人微信：sgm961019</p>
+          <p>邮箱：1620524565@qq.com</p>
+        </div>
+      </div>
+      <div class="weixin">
+        <h2 class="hometitle">微信关注</h2>
+        <ul>
+          <img src="static/images/wx.jpg">
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="/">Sning</a> 
+  <a href="http://www.yangqq.com" target="_blank">模板来自：杨青个人博客</a>
+  </p>
+</footer>
+</body>
+</html>

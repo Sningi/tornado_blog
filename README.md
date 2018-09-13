@@ -1,5 +1,5 @@
 #1 Init database
-    see the text mariadb.sql
+    #see the text mariadb.sql
 
     #
     MariaDB [blog]> select * from category;

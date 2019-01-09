@@ -1,8 +1,8 @@
 import os
 import json
-from tornado.web import RequestHandler
-from mariadb.test import createart
 import time
+from tornado.web import RequestHandler
+from mariadb.dboperate import MariaDB
 
 
 class ResourceHandler(RequestHandler):
@@ -53,10 +53,10 @@ class CreateHandler(RequestHandler):
         title = str(self.get_argument('title'))
         key_words = str(self.get_argument('key_words'))
         category = str(self.get_argument('category'))
-        image_url = str(self.get_argument('image_url'))
+        # image_url = str(self.get_argument('image_url'))
         summary = str(self.get_argument('summary'))
         content = str(self.get_argument('content'))
-        if(createart(u_id, title, summary, key_words, category, image_url, content)):
+        if(MariaDB.insert_article(u_id, title, summary, key_words, category, content)):
             print("articles insert finish")
         else:
             self.set_status(201)

@@ -3,8 +3,10 @@
 ![首页](https://github.com/Sningi/tornado-blog/blob/master/showpic/pindex.png)
 #### 详情
 ![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
-#### 列表
-![列表](https://github.com/Sningi/tornado-blog/blob/master/showpic/pbloglist.png)
+#### 搜素
+![搜素](https://github.com/Sningi/tornado-blog/blob/master/showpic/psearch.png)
+#### 关于
+![关于](https://github.com/Sningi/tornado-blog/blob/master/showpic/peditor.png)
 #### 项目分享
 ![项目分享](https://github.com/Sningi/tornado-blog/blob/master/showpic/pshare.png)
 #### 文件
@@ -37,5 +39,6 @@
     |  8 | 收 藏         |    3 |
     | 10 | Others        |    0 |
     +----+---------------+------+
+    数据库备份blog.sql
 ## 3、pip install pymysql tronado
 ## 4、python3 server.py

@@ -5,8 +5,8 @@
 ![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
 #### 搜素
 ![搜素](https://github.com/Sningi/tornado-blog/blob/master/showpic/psearch.png)
-#### 关于
-![关于](https://github.com/Sningi/tornado-blog/blob/master/showpic/peditor.png)
+#### 富文本编辑器
+![富文本](https://github.com/Sningi/tornado-blog/blob/master/showpic/peditor.png)
 #### 项目分享
 ![项目分享](https://github.com/Sningi/tornado-blog/blob/master/showpic/pshare.png)
 #### 文件

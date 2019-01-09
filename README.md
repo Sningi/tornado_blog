@@ -1,5 +1,5 @@
-# 1 Init database
-    #*detail see the init_mariadb.sql*
+# 1、Init database
+    # *detail see the init_mariadb.sql*
     #
     MariaDB [blog]> show tables;
     +----------------+
@@ -26,8 +26,8 @@
     | 10 | Others        |    0 |
     +----+---------------+------+
 
-# 2 pip install pymysql tronado
-# 3 python3 server.py
-# 4 blog show
+# 2、pip install pymysql tronado
+# 3、python3 server.py
+# 4、blog show
 # index
 ![首页](https://github.com/Sningi/tornado-blog/blob/master/showpic/pindex.png)

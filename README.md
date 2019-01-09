@@ -32,4 +32,4 @@
 ##### index
 ![首页](https://github.com/Sningi/tornado-blog/blob/master/showpic/pindex.png)
 ##### index
-![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/particle.png)
+![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)

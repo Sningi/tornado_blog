@@ -14,7 +14,6 @@
 
 ## 2、数据库初始化 Init database
     **detail see the init_mariadb.sql**
-'''
     MariaDB [blog]> show tables;
     +----------------+
     | Tables_in_blog |
@@ -38,6 +37,5 @@
     |  8 | 收 藏         |    3 |
     | 10 | Others        |    0 |
     +----+---------------+------+
-'''
 ## 3、pip install pymysql tronado
 ## 4、python3 server.py

@@ -1,6 +1,20 @@
-### 1、Init database
-    # *detail see the init_mariadb.sql*
-    #
+## 1、博客展示
+#### 首页
+![首页](https://github.com/Sningi/tornado-blog/blob/master/showpic/pindex.png)
+#### 详情
+![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
+#### 列表
+![列表](https://github.com/Sningi/tornado-blog/blob/master/showpic/pbloglist.png)
+#### 项目分享
+![项目分享](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
+#### 文件
+![文件](https://github.com/Sningi/tornado-blog/blob/master/showpic/pflie.png)
+#### 关于
+![关于](https://github.com/Sningi/tornado-blog/blob/master/showpic/pabout.png)
+
+## 2、数据库初始化 Init database
+    *detail see the init_mariadb.sql*
+
     MariaDB [blog]> show tables;
     +----------------+
     | Tables_in_blog |
@@ -10,7 +24,6 @@
     | users          |
     +----------------+
     <br>
-    #
     MariaDB [blog]> select * from category;
     +----+---------------+------+
     | id | name          | sum  |
@@ -26,10 +39,5 @@
     | 10 | Others        |    0 |
     +----+---------------+------+
 
-### 2、pip install pymysql tronado
-### 3、python3 server.py
-### 4、blog show
-##### index
-![首页](https://github.com/Sningi/tornado-blog/blob/master/showpic/pindex.png)
-##### index
-![详情](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
+## 3、pip install pymysql tronado
+## 4、python3 server.py

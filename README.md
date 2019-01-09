@@ -6,15 +6,15 @@
 #### 列表
 ![列表](https://github.com/Sningi/tornado-blog/blob/master/showpic/pbloglist.png)
 #### 项目分享
-![项目分享](https://github.com/Sningi/tornado-blog/blob/master/showpic/partcile.png)
+![项目分享](https://github.com/Sningi/tornado-blog/blob/master/showpic/pshare.png)
 #### 文件
-![文件](https://github.com/Sningi/tornado-blog/blob/master/showpic/pflie.png)
+![文件](https://github.com/Sningi/tornado-blog/blob/master/showpic/pfile.png)
 #### 关于
 ![关于](https://github.com/Sningi/tornado-blog/blob/master/showpic/pabout.png)
 
 ## 2、数据库初始化 Init database
-    *detail see the init_mariadb.sql*
-
+    **detail see the init_mariadb.sql**
+'''
     MariaDB [blog]> show tables;
     +----------------+
     | Tables_in_blog |
@@ -38,6 +38,6 @@
     |  8 | 收 藏         |    3 |
     | 10 | Others        |    0 |
     +----+---------------+------+
-
+'''
 ## 3、pip install pymysql tronado
 ## 4、python3 server.py

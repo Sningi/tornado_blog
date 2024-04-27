@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sning 文章列表</title>
+<meta name="keywords" content="个人博客,Sning个人博客,宋高明" />
+<meta name="description" content="Sning个人博客，学无止境，勇于探索。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/base.css" rel="stylesheet">
+<link href="static/css/index.css" rel="stylesheet">
+<link href="static/css/m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <div id="mnav">
+    <div class="logo"><a href="/">Sning个人博客</a></div>
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <ul id="starlist">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog_list=9900.html">博客</a></li>
+        <li><a href="write.html">写作</a></li>
+        <li><a href="share.html">项目</a></li>
+        <li><a href="file.html">文件</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+  </div>
+<script>
+window.onload = function ()
+{
+  var oH2 = document.getElementById("mnavh");
+  var oUl = document.getElementById("starlist");
+  oH2.onclick = function ()
+  {
+    var style = oUl.style;
+    style.display = style.display == "block" ? "none" : "block";
+    oH2.className = style.display == "block" ? "open" : ""
+  }
+var obj=null;
+var As=document.getElementById('starlist').getElementsByTagName('a');
+obj = As[0];
+for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+obj=As[i];}
+obj.id='selected'
+}
+</script>
+</header>
+<article>
+  <h1 class="t_nav"><span>不要轻易放弃。学习成长的路上，我们长路漫漫，只因学无止境。 </span>
+    <a href="/" class="n1">首 页</a><a href="blog_list=9900.html" class="n2">博 客</a><a href="{{top_cateurl}}" class="n3">{{cate}}
+    </a></h1>
+  <div class="blogs">
+    <div  id="articlelist">
+    {% for article in articles %}
+        <li>
+          <span class="blogpic">
+            <a href="article_id={{ article[0] }}.html" target="_blank">
+            <img src="static/title_img/{{article[0]}}.jpg">
+            </a>
+          </span>
+          <h3 class="blogtitle">
+            <a href="article_id={{ article[0] }}.html" target="_blank">
+            {{ article[1] }}
+            </a>
+          </h3>
+          <div class="bloginfo">
+            <p>{{ article[2] }}</p>
+          </div>
+          <div class="autor">
+            <span class="lm">
+              <a href="article_id={{ article[0] }}.html" target="_blank" title="{{ article[3] }}" target="_blank" class="classname">
+                {{ article[3] }}
+              </a>
+            </span>
+            <span class="dtime">{{ article[4] }}</span><span class="viewnum">浏览（{{article[5]}}）</span>
+            <span class="readmore"><a href="article_id={{ article[0] }}.html" target="_blank">阅读原文>></a></span>
+          </div>
+        </li>
+    {% end %}
+    {% if not articles %}
+    <li><p style="text-align: center;">无相关文章</p></li>
+    {% end %}
+    </div>
+      <div class="pagelist">
+      <a><b>第{{nextpage}}页</b> </a>&nbsp;&nbsp;&nbsp;
+      <a href="{{basecateurl}}{{beforpage}}.html">上一页</a>
+      <a href="{{basecateurl}}00.html">1</a>&nbsp;
+      <a href="{{basecateurl}}01.html">2</a>&nbsp;
+      <a href="{{basecateurl}}02.html">3</a>&nbsp;
+      <a href="{{basecateurl}}03.html">4</a>&nbsp;
+      <a href="{{basecateurl}}{{nextpage}}.html">下一页</a>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="search">
+      <form id="searchform" action="/search00.html" method="get">
+        <input name="key" id="key" class="input_text" value="" type="text" placeholder="请输入关键词">&nbsp;
+        <button style="background: #FBC9C9;padding-left: 5px;"> 搜 索 </button>
+      </form>  
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">文章分类</h2>
+      <ul id="cate">
+        {% for category in categorys %}
+          <li><a class="catel" href="blog_list={{"%02d" % (int(category[1]))}}00.html" >{{category[2]}}</a><a class="cater" href="blog_list={{"%02d" % (int(category[1]))}}00.html">( {{category[0]}} )</a></li>
+        {% end %}
+      </ul>
+      </div>
+    <div class="lmnav">
+      <h2 class="hometitle">快速导航</h2>
+      <ul class="navbor">
+        <li><a href="#">Python</a>
+          <ul>
+            <li><a href="#">数据可视化</a></li>
+            <li><a href="#">人脸识别</a></li>
+            <li><a href="#">人工智能</a></li>
+          </ul>
+        </li>
+        <li><a href="share.html">Linux</a>
+          <ul>
+            <li><a href="list.html">系统/软件安装配置</a></li>
+            <li><a href="#">交叉编译</a></li>
+          </ul>
+        </li>
+        <li><a href="list.html">Java</a>
+          <ul>
+            <li><a href="list.html">学习笔记</a></li>
+            <li><a href="#">HTML5+CSS3</a></li>
+            <li><a href="#">网站建设</a></li>
+          </ul>
+        </li>
+        <li><a href="#">慢生活</a></li>
+      </ul>
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">点击排行</h2>
+      <ul>
+        {% for article in paihang %}
+        <li><b><a href="article_id={{article[0]}}.html"  target="_blank">{{article[1]}}</a></b>
+          <p ><i><img src="static/title_img/{{article[0]}}.jpg"></i>{{article[2]}}</p>
+        </li>
+        {% end %}
+      </ul>
+    </div>
+    <div class="weixin">
+      <h2 class="hometitle">官方微信</h2>
+      <ul>
+        <img src="static/images/wx.jpg">
+      </ul>
+    </div>
+    <div class="ad" id="left_flow2"> <img src="static/images/ad.jpg"> </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="/">Sning</a>
+  <a href="http://www.yangqq.com" target="_blank">模板来自：杨青个人博客</a>
+  </p>
+</footer>
+<script src="static/js/mouse.js"></script>
+</body>
+</html>

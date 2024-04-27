@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sning 文章详情</title>
+<meta name="keywords" content="个人博客,Sning个人博客,宋高明" />
+<meta name="description" content="Sning个人博客，学无止境，勇于探索。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/base.css" rel="stylesheet">
+<link href="static/css/index.css" rel="stylesheet">
+<link href="static/css/m.css" rel="stylesheet">
+<link href="static/ckeditor/editor.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <div id="mnav">
+    <div class="logo"><a href="/">Sning个人博客</a></div>
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <ul id="starlist">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog_list=9900.html">博客</a></li>
+        <li><a href="write.html">写作</a></li>
+        <li><a href="share.html">项目</a></li>
+        <li><a href="file.html">文件</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+  </div>
+<script>
+window.onload = function ()
+{
+  var oH2 = document.getElementById("mnavh");
+  var oUl = document.getElementById("starlist");
+  oH2.onclick = function ()
+  {
+    var style = oUl.style;
+    style.display = style.display == "block" ? "none" : "block";
+    oH2.className = style.display == "block" ? "open" : ""
+  }
+var obj=null;
+var As=document.getElementById('starlist').getElementsByTagName('a');
+obj = As[0];
+for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+obj=As[i];}
+obj.id='selected'
+}
+</script>
+</header>
+<script src="static/ckeditor/ckeditor.js"></script>
+<link href="static/css/article.css" rel="stylesheet">
+<article>
+  <h1 class="t_nav"><span>不要轻易放弃。学习成长的路上，我们长路漫漫，只因学无止境。 </span>
+    <a href="/" class="n1">首 页</a><a href="blog_list=9900.html" class="n2">博 客</a><a href="{{top_cateurl}}" class="n3">{{cate}}
+    </a></h1>
+  <div class="infos">
+    <div class="newsview">
+      <h3 class="news_title">
+      {{data[0]}}
+      </h3>
+      <div class="news_author">
+        <span class="au01"><a href="/user=1">Sning</a></span>
+        <span class="au02">
+      {{data[1]}}
+        </span>
+        <span class="au03">共浏览
+        <b>
+      {{data[2]+1}}
+        </b>次</span>
+      </div>
+      <div class="tags"><a href="/e/tags/?tagname=%B8%F6%C8%CB%B2%A9%BF%CD&amp;tempid=13" target="_blank">个人博客</a> &nbsp; <a href="/e/tags/?tagname=%D0%A1%CA%C0%BD%E7&amp;tempid=13" target="_blank">小世界</a></div>
+      <div class="news_about"><strong>简述</strong>
+      {{data[3]}}
+      </div>
+        <div class="document-editor__editable ck ck-content ck-editor__editable ck-rounded-corners ck-blurred ck-editor__editable_inline" contenteditable="false">
+        {% raw data[4] %}
+        </div>
+  </div>
+    <div class="nextinfo">
+      <p>上一篇：<a href="/news/life/2018-03-13/804.html">作为一个设计师,如果遭到质疑你是否能恪守自己的原则?</a></p>
+      <p>下一篇：<a href="/news/life/">返回列表</a></p>
+    </div>
+    <div class="otherlink">
+      <h2>相关文章</h2>
+      <ul>
+        <li><a href="/download/div/2018-04-22/815.html" title="html5个人博客模板《黑色格调》">html5个人博客模板《黑色格调》</a></li>
+        <li><a href="/download/div/2018-04-18/814.html" title="html5个人博客模板主题《清雅》">html5个人博客模板主题《清雅》</a></li>
+        <li><a href="/download/div/2018-03-18/807.html" title="html5个人博客模板主题《绅士》">html5个人博客模板主题《绅士》</a></li>
+        <li><a href="/download/div/2017-07-16/785.html" title="古典个人博客模板《江南墨卷》">古典个人博客模板《江南墨卷》</a></li>
+        <li><a href="/download/div/2017-07-13/783.html" title="古典风格-个人博客模板">古典风格-个人博客模板</a></li>
+        <li><a href="/download/div/2015-06-28/748.html" title="个人博客《草根寻梦》―手机版模板">个人博客《草根寻梦》―手机版模板</a></li>
+        <li><a href="/download/div/2015-04-10/746.html" title="【活动作品】柠檬绿兔小白个人博客模板">【活动作品】柠檬绿兔小白个人博客模板</a></li>
+        <li><a href="/jstt/bj/2015-01-09/740.html" title="【匆匆那些年】总结个人博客经历的这四年…">【匆匆那些年】总结个人博客经历的这四年…</a></li>
+      </ul>
+    </div>
+    <div class="news_pl">
+      <h2>文章评论</h2>
+      <ul>
+        <div class="gbko"> </div>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="search">
+      <form id="searchform" action="/search00.html" method="get">
+        <input name="key" id="key" class="input_text" value="" type="text" placeholder="请输入关键词">&nbsp;
+        <button style="background: #FBC9C9;padding-left: 5px;"> 搜 索 </button>
+      </form>  
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">文章分类</h2>
+      <ul id="cate">
+        {% for category in categorys %}
+          <li><a class="catel" href="blog_list={{"%02d" % (int(category[1]))}}00.html" >{{category[2]}}</a><a class="cater" href="blog_list={{"%02d" % (int(category[1]))}}00.html">( {{category[0]}} )</a></li>
+        {% end %}
+      </ul>
+      </div>
+    <div class="lmnav">
+      <h2 class="hometitle">快速导航</h2>
+      <ul class="navbor">
+        <li><a href="#">Python</a>
+          <ul>
+            <li><a href="#">数据可视化</a></li>
+            <li><a href="#">人脸识别</a></li>
+            <li><a href="#">人工智能</a></li>
+          </ul>
+        </li>
+        <li><a href="share.html">Linux</a>
+          <ul>
+            <li><a href="list.html">系统/软件安装配置</a></li>
+            <li><a href="#">交叉编译</a></li>
+          </ul>
+        </li>
+        <li><a href="list.html">Java</a>
+          <ul>
+            <li><a href="list.html">学习笔记</a></li>
+            <li><a href="#">HTML5+CSS3</a></li>
+            <li><a href="#">网站建设</a></li>
+          </ul>
+        </li>
+        <li><a href="#">慢生活</a></li>
+      </ul>
+    </div>
+    <div class="cloud">
+      <h2 class="hometitle">标签云</h2>
+      <ul>
+        <a href="/">Python</a>
+        <a href="/">html5</a>
+        <a href="/">校园生活</a>
+        <a href="/">人脸识别</a>
+        <a href="/">青春</a>
+        <a href="/">温暖</a>
+        <a href="/">数据可视化</a>
+        <a href="/">学无止境</a>
+        <a href="/">考研</a>
+        <a href="/">Linux</a>
+        <a href="/">Java</a>
+        <a href="/">C/C++</a>
+      </ul>
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">点击排行</h2>
+      <ul>
+        {% for article in paihang %}
+        <li><b><a href="article_id={{article[0]}}.html"  target="_blank">{{article[1]}}</a></b>
+          <p ><i><img src="static/title_img/{{article[0]}}.jpg"></i>{{article[2]}}</p>
+        </li>
+        {% end %}
+      </ul>
+    </div>
+    <div class="weixin">
+      <h2 class="hometitle">官方微信</h2>
+      <ul>
+        <img src="static/images/wx.jpg">
+      </ul>
+    </div>
+    <div class="ad" id="left_flow2"> <img src="static/images/ad.jpg"> </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="/">Sning</a>
+  <a href="http://www.yangqq.com" target="_blank">模板来自：杨青个人博客</a>
+  </p>
+</footer>
+<script src="static/js/mouse.js"></script>
+</body>
+</html>
